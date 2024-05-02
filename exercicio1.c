@@ -29,6 +29,6 @@ int main(){
         soma += array[i];
     }
 
-    printf("%.1f", soma);
+    printf("A soma dos números digitados é: %.1f", soma);
 
 }
