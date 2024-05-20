@@ -26,6 +26,14 @@ int mult_matriz(int matriz1[][coluna_matriz1], int matriz2[][coluna_matriz2], in
     }
 }
 
+void transpor_matriz(int matriz[][coluna_matriz1], int transposta[coluna_matriz1][linha_matriz1]) {
+    for (int linha = 0; linha < linha_matriz1; linha++) {
+        for (int coluna = 0; coluna < coluna_matriz1; coluna++) {
+            transposta[coluna][linha] = matriz[linha][coluna];
+        }
+    }
+}
+
 int main(){
     int matriz1[linha_matriz1][coluna_matriz1] = {
         {2, -4, 4},
@@ -47,6 +55,18 @@ int main(){
     for (int linha = 0; linha < linha_matriz1; linha++){
         for (int coluna = 0; coluna < coluna_matriz2; coluna++){
             printf("%d ", mat_result[linha][coluna]);
+        }
+        printf("\n");
+    }
+
+    int transposta[coluna_matriz1][linha_matriz1];
+    transpor_matriz(matriz1, transposta);
+
+
+    printf("\nMatriz 1 Transposta:\n");
+    for (int linha = 0; linha < coluna_matriz1; linha++){
+        for (int coluna = 0; coluna < linha_matriz1; coluna++){
+            printf("%d ", transposta[linha][coluna]);
         }
         printf("\n");
     }
