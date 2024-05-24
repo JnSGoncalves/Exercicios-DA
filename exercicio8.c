@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define Total 5
-
 int* inverter_array(int *array, int tamanho) {
     int *array2 = (int *)malloc(tamanho * sizeof(int));
 
@@ -14,8 +12,17 @@ int* inverter_array(int *array, int tamanho) {
 }
 
 int main() {
-    int array[Total] = {-5, 5, 7, 7, 9};
-    int tamanho = Total;
+    int tamanho;
+
+    printf("Digite o tamanho do array: ");
+    scanf("%d", &tamanho);
+
+    int *array = (int *)malloc(tamanho * sizeof(int));
+
+    printf("Digite os elementos do array:\n");
+    for (int i = 0; i < tamanho; i++) {
+        scanf("%d", &array[i]);
+    }
 
     int *array_inv = inverter_array(array, tamanho);
 
@@ -23,4 +30,7 @@ int main() {
     for (int i = 0; i < tamanho; i++) {
         printf("%d ", array_inv[i]);
     }
+    printf("\n");
+
+    return 0;
 }
