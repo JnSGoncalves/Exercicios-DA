@@ -27,10 +27,10 @@ int compara_salario(const void *a, const void *b) {
 int main() {
     // Criação e inicialização do array de structs
     Pessoa pessoas[] = {
-        {"Alice", 30, 2500.65},
-        {"Bob", 18, 1356.98},
-        {"Carlos", 28, 980.68},
-        {"Diana", 22, 1850.80}
+        {"Ana", 30, 2500.65},
+        {"Carlos", 18, 1356.98},
+        {"João", 28, 980.68},
+        {"Vinicius", 22, 1850.80}
     };
     
     int n = sizeof(pessoas) / sizeof(pessoas[0]);
